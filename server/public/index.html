@@ -1,13 +1,13 @@
 <html>
 
 <head>
-  <title>Express</title>
+  <title>Example</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
+  <h1>Esempio NodeJS</h1>
+  <p>Inserisci username e password</p>
   <input id="user" type="text" placeholder="username">
   <input id="pswd" type="password" placeholder="password">
   <button id="singin">singin</button>
@@ -29,7 +29,7 @@
                200: function () {
                    alert("Registrato");
                },
-               404: function () {
+               409: function () {
                    alert("Già regitrato")
                }
            }

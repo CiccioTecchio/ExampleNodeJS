@@ -67,3 +67,4 @@ server/.idea/jsLibraryMappings.xml
 server/.idea/Server.iml
 
 \.idea/
+.vscode/launch.json
