@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <h1>Express</h1>
+  <p>Welcome to Express</p>
+  <input id="user" type="text" placeholder="username">
+  <input id="pswd" type="password" placeholder="password">
+  <button id="singin">singin</button>
+  <button id="login">login</button>
+
+<script   src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+<script>
+
+
+    $("#singin").click(function () {
+        let credenziali = {username: $("#user").val(), password:$("#pswd").val()};
+        $.ajax({
+           method: 'POST',
+           data: credenziali,
+           url: 'users/signin',
+           statusCode:{
+               200: function () {
+                   alert("Registrato");
+               },
+               404: function () {
+                   alert("Già regitrato")
+               }
+           }
+        });
+    });
+
+    $("#login").click(function () {
+        let credenziali = {username: $("#user").val(), password:$("#pswd").val()};
+        $.ajax({
+            method: 'POST',
+            data: credenziali,
+            url: 'users/login',
+            statusCode:{
+                200: function () {
+                    alert("Login effettuato con successo");
+                },
+                404: function () {
+                    alert("User o password errati");
+                }
+            }
+        });
+    });
+
+      /*  $ajax({
+            type: 'POST',
+            user: '/users/login',
+
+        function (doc) {
+            alert(JSON.stringify(doc));
+        }*/
+    ;
+</script>
+</body>
+
+</html>

@@ -59,3 +59,11 @@ typings/
 
 # next.js build output
 .next
+server/.idea/runConfigurations/bin_www.xml
+server/.idea/workspace.xml
+server/.idea/modules.xml
+server/.idea/misc.xml
+server/.idea/jsLibraryMappings.xml
+server/.idea/Server.iml
+
+\.idea/
