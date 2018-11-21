@@ -1,0 +1,21 @@
+{
+    "all": true,
+    "cache": false,
+    "exclude": [
+      "**/index.js",
+      "**/singleton.js",
+      "**/app.js",
+      "**/coverage/**/**.js",
+      "**/model/"
+    ],
+    "extensions": [
+        ".js"
+    ],
+    "report-dir": "./coverage",
+    "reporter": [
+        "html",
+        "text",
+        "text-summary"
+    ],
+    "temp-directory": "./coverage/.nyc_output"
+}

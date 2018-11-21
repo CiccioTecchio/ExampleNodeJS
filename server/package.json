@@ -3,14 +3,24 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "nyc mocha"
   },
   "dependencies": {
+    "chai-http": "^4.2.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "morgan": "~1.9.0",
+    "mysql2": "1.6.4",
+    "nyc": "^13.1.0",
     "sequelize": "^4.41.2",
-    "mysql2": "1.6.4"
+    "superagent": "^4.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-match": "^1.1.1",
+    "mocha": "^5.2.0",
+    "request": "^2.88.0"
   }
 }

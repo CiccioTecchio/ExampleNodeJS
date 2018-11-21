@@ -68,3 +68,5 @@ server/.idea/Server.iml
 
 \.idea/
 .vscode/launch.json
+server/.nyc_output
+server/coverage
