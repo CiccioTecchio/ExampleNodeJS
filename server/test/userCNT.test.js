@@ -73,3 +73,47 @@ it('/POST: it should not login a user if it does not exist',function(done){
         });
 });
 });
+
+describe('Userlist',function(){
+it('/GET: it should show the user list',function(done){
+chai.request(server)
+.get('/users/userlist')
+.end(function(err,res){
+res.should.have.status(200);
+done();
+});
+});
+
+it('/GET: it should show nothing becauser the user list is empty',function(done){
+    chai.request(server)
+    .get('/users/userlist')
+    .end(function(err,res){
+    res.should.have.status(404);
+    done();
+    });
+    });
+});
+
+describe('Delete',function(){
+    it('/DELETE: it should delete the test user',function(done){
+    chai.request(server)
+    .delete('/users/deleteTest')
+    .end(function(err,res){
+    res.should.have.status(200);
+    expect(res.body.message).equals("eliminati");
+    console.log(res.body);
+    done();
+    });
+    });
+    
+    it('/DELETE: there isn\'t test user ',function(done){
+        chai.request(server)
+        .delete('/users/deleteTest')
+        .end(function(err,res){
+        res.should.have.status(404);
+        expect(res.body.message).to.match(/non ci sono tester/);
+        console.log(res.body);
+        done();
+        });
+        });
+    });

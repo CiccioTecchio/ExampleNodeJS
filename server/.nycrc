@@ -1,13 +1,15 @@
 {
     "all": true,
     "cache": false,
-    "exclude": [
-      "**/index.js",
-      "**/singleton.js",
-      "**/app.js",
-      "**/coverage/**/**.js",
-      "**/model/"
+    "include": [
+        "**/routes/**.js"
     ],
+    "exclude": [
+        "**/singleton.js",
+        "**/app.js",
+        "**/coverage/**/**.js",
+        "**/model/"
+      ],
     "extensions": [
         ".js"
     ],
