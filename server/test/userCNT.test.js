@@ -10,6 +10,7 @@ chai.use(require('chai-match'));
 let  should = chai.should();
 chai.use(chaiHttp);
 
+// todo test with regexp
 let regexp = {
 username :/\w*/,
 password :/((\w+|\d+)+){4,32}/,
@@ -18,13 +19,15 @@ mail : /\w*\d*@studenti\.unisa\.it/
 
 describe('Signin',function(){
 it('/POST: it should add a user if  exist',function(done){
-    let random = randomstring.generate(4);
+    let random = "Test"+randomstring.generate(4);
     let user ={username:random,password:"1234"};
     chai.request(server)
     .post('/users/signin')
     .send(user)
     .end(function(err,res){
         res.should.have.status(200);
+        expect(res.body.username).to.match(regexp.username);
+        expect(res.body.password).to.match(regexp.password);
         done();
     });
 });
@@ -37,6 +40,8 @@ it('/POST: it should not add a user if it does exist',function(done){
     .send(user)
     .end(function(err,res){
         res.should.have.status(409);
+        expect(res.body.username).to.match(regexp.username);
+        expect(res.body.password).to.match(regexp.password);
         done();
     });
 });
@@ -49,6 +54,8 @@ it('/POST: it should login a user if it exist',function(done){
     .send(user)
     .end(function(err,res){
         res.should.have.status(200);
+        expect(res.body.username).to.match(regexp.username);
+        expect(res.body.password).to.match(regexp.password);
         done();
     });
 });
@@ -60,6 +67,8 @@ it('/POST: it should not login a user if it does not exist',function(done){
     .send(user)
     .end(function(err,res){
     res.should.have.status(404);
+    expect(res.body.username).to.match(regexp.username);
+    expect(res.body.password).to.match(regexp.password);
     done();
         });
 });

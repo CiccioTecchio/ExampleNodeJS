@@ -67,3 +67,4 @@ node app.js``
 - [Express](https://expressjs.com/)
 - [Sequelize](http://docs.sequelizejs.com/)
 - [Codici HTTP](https://restfulapi.net/http-status-codes/)
+- [Testing with Mocha e Chai](https://mherman.org/blog/testing-node-js-with-mocha-and-chai/)
