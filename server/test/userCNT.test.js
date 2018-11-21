@@ -101,7 +101,6 @@ describe('Delete',function(){
     .end(function(err,res){
     res.should.have.status(200);
     expect(res.body.message).equals("eliminati");
-    console.log(res.body);
     done();
     });
     });
@@ -111,8 +110,7 @@ describe('Delete',function(){
         .delete('/users/deleteTest')
         .end(function(err,res){
         res.should.have.status(404);
-        expect(res.body.message).to.match(/non ci sono tester/);
-        console.log(res.body);
+        expect(res.body.message).equals("non ci sono tester");
         done();
         });
         });
