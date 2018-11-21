@@ -18,12 +18,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
-let server = app.listen(3000, "127.0.0.1", function () {
-    let address = server.address().address;
-    let port = server.address().port;
-    console.log("Listening on "+address+":"+port);
-});
+app.use('/users', usersRouter.router);
 
 module.exports = app;
