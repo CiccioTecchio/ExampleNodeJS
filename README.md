@@ -1,5 +1,5 @@
 # ExampleNodeJS  
-[![Build Status](https://travis-ci.com/CiccioTecchio/ExampleNodeJS.svg?branch=master)](https://travis-ci.com/CiccioTecchio/ExampleNodeJS)
+[![Build Status](https://travis-ci.com/CiccioTecchio/ExampleNodeJS.svg?branch=master)](https://travis-ci.com/CiccioTecchio/ExampleNodeJS) [![Coverage Status](https://coveralls.io/repos/github/CiccioTecchio/ExampleNodeJS/badge.svg?branch=master)](https://coveralls.io/github/CiccioTecchio/ExampleNodeJS?branch=master)
 
 In questo esempio vi mostrerò una semplice applicazione web fatta in NodeJS.
 
