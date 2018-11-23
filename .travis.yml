@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "10"
+cache:
+  directories:
+    - server/node_modules
 services:
   - mysql
 before_install: 

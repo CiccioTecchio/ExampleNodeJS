@@ -1,4 +1,5 @@
-# ExampleNodeJS
+# ExampleNodeJS  
+[![Build Status](https://travis-ci.com/CiccioTecchio/ExampleNodeJS.svg?branch=master)](https://travis-ci.com/CiccioTecchio/ExampleNodeJS)
 
 In questo esempio vi mostrerò una semplice applicazione web fatta in NodeJS.
 
