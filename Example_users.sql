@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `Example` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `Example`;
 -- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
 --
 -- Host: localhost    Database: Example
@@ -35,7 +37,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('Paolo','1111'),('Peppe','1111'),('Pluto','1234'),('Poldo','1111');
+INSERT INTO `users` VALUES ('1234',NULL),('bisubieuwb','1234'),('Ciccio','1234'),('G2wN','1234'),('Java','1234'),('Js','1234'),('Mario','1234'),('MySql','1234'),('Palombo','1234'),('Paolo','1111'),('Pasquale','1234'),('Peppe','1111'),('Pippppo','1111111'),('Pluto','1234'),('Poldo','1111'),('Python','1234'),('Query','1234'),('uuyfuy','1234');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-20 21:51:48
+-- Dump completed on 2018-11-23 14:32:22
