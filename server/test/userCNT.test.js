@@ -84,14 +84,6 @@ done();
 });
 });
 
-it('/GET: it should show nothing becauser the user list is empty',function(done){
-    chai.request(server)
-    .get('/users/userlist')
-    .end(function(err,res){
-    res.should.have.status(404);
-    done();
-    });
-    });
 });
 
 describe('Delete',function(){
@@ -104,14 +96,4 @@ describe('Delete',function(){
     done();
     });
     });
-    
-    it('/DELETE: there isn\'t test user ',function(done){
-        chai.request(server)
-        .delete('/users/deleteTest')
-        .end(function(err,res){
-        res.should.have.status(404);
-        expect(res.body.message).equals("non ci sono tester");
-        done();
-        });
-        });
-    });
+ });

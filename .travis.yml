@@ -1,5 +1,10 @@
 language: node_js
--node_js:
-  - "stable"
+node_js:
+  - "10"
+services:
+  - mysql
+before_install: 
+ - cd server 
+ - mysql -u root --password="" < test/travis.sql
 script:
 - npm test
