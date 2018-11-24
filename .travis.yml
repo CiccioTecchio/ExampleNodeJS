@@ -13,4 +13,4 @@ script:
 - npm test
 after_success: 
 - npm run coverage
-#- eslint --fix app.js routes/** 
+- eslint --fix app.js routes/** test/**
