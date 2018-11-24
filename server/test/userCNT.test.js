@@ -5,7 +5,7 @@ let chai = require('chai');
 let chaiHttp = require('chai-http');
 let randomstring = require("randomstring");
 let server = require('../app');
-
+let  should = chai.should();
 chai.use(require('chai-match'));
 chai.use(chaiHttp);
 
