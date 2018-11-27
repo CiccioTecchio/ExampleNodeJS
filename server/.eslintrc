@@ -57,7 +57,11 @@
         "no-continue": 2,
         "no-duplicate-imports": 2,
         "no-empty-function": 2,
-        "no-var": 2
+        "no-var": 2,
+        "arrow-spacing": 2,
+        "camelcase": 2,
+        "semi": 2,
+        "no-undef-init": 2
     },
     "env": {
         "node": true,

@@ -15,7 +15,7 @@ let regexp = {
     username :/\w*/,
     password :/((\w+|\d+)+){4,32}/,
     mail : /\w*\d*@studenti\.unisa\.it/
-}
+};
 
 describe('Signin', function(){
     it('/POST: it should add a user if  exist', function(done){

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "nyc mocha --exit && ./node_modules/.bin/eslint --fix app.js routes/** test/**.js",
+    "test": "nyc mocha --exit && ./node_modules/.bin/eslint --fix app.js routes/** test/**.js signleton/**.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
