@@ -10,7 +10,6 @@ router.post('/login', function(req, res){
         else res.status(200).send(doc);});
 });
 
-
 router.post('/signin', function (req, res) {
     user.create({"username": req.body.username, "password":req.body.password})
         .then(doc => res.send(doc).status(200).end())

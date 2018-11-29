@@ -70,3 +70,4 @@ server/.idea/Server.iml
 .vscode/launch.json
 server/.nyc_output
 server/coverage
+ExampleNodeJS.code-workspace
