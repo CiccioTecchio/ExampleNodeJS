@@ -3,7 +3,6 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let upload = require('express-fileupload');
-let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/usersCNT');
 let fileStorageRouter = require('./routes/fileStorageCNT');
 let observerRouter = require('../server/routes/observer');
@@ -19,7 +18,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(upload());
 
 
-app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/file', fileStorageRouter);
 app.use('/observer', observerRouter);

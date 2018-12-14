@@ -8,12 +8,14 @@
 
 <body>
   <h1>Esempio NodeJS</h1>
+  <div>
   <p>Inserisci username e password</p>
   <input id="user" type="text" placeholder="username">
   <input id="pswd" type="password" placeholder="password">
   <button id="singin">singin</button>
-  <button id="login">login</button>
-
+  <button id="login">login</button><br>
+  <label>Last login: </label><p></p>
+  </div>
 <script   src="https://code.jquery.com/jquery-3.3.1.min.js"
           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
           crossorigin="anonymous"></script>
@@ -46,6 +48,7 @@
             statusCode:{
                 200: function () {
                     alert("Login effettuato con successo");
+                    accedendo(credenziali);
                 },
                 404: function () {
                     alert("User o password errati");
@@ -53,15 +56,22 @@
             }
         });
     });
-
-      /*  $ajax({
-            type: 'POST',
-            user: '/users/login',
-
-        function (doc) {
-            alert(JSON.stringify(doc));
-        }*/
-    ;
+        function accedendo (credenziali) {
+         $.ajax({
+             url: "observer/accede",
+             type: "POST",
+             data: credenziali,
+         })   
+        }
+        setInterval(function(){
+            $.ajax({
+                url: "observer/acceduto",
+                type: "GET",
+                success:  function(done){
+                    $("p:nth-of-type(2)").html(done.username)
+                }
+            })
+        }, 3000);
 </script>
 </body>
 

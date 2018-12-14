@@ -18,14 +18,12 @@ router.post('/signin', function (req, res) {
 
 router.get('/userlist', function(req, res){
     user.findAll({attributes: ['username']})//attributes sarebbe la SELECT
-        .then(doc => res.send(doc).status(200).end())
-        .catch(err => res.sendStatus(404).end(err));
+        .then(doc => res.send(doc).status(200).end());
 });
 
 router.delete('/deleteTest', function(req, res){
     user.destroy({where: {username: {[Op.like]: 'Test%'}}})
-        .then(doc => res.send(doc.body).status(200).end())
-        .catch(err => res.sendStatus(404).end(err));
+        .then(doc => res.send(doc.body).status(200).end());
 });
 
 module.exports = router;

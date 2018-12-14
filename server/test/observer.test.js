@@ -44,3 +44,36 @@ it('GET: it should response with a string', function(done){
             done();
         });
 });
+
+it('GET ACCEDUTO: it expects to receive an object', function(done){
+    chai.request(server)
+        .get('/observer/acceduto')
+        .end(function(err, res){
+            res.should.have.status(200);
+            expect(res.body).to.be.an('object');
+            done();
+        });
+});
+
+it('POST ACCEDE: it expects to receive an object', function(done){
+    let obj={username:"Ciccio", password:"1234"};
+    chai.request(server)
+        .post('/observer/accede')
+        .send(obj)
+        .end(function(err, res){
+            res.should.have.status(200);
+            expect(res.body).to.be.an('object');
+            done();
+        });
+});
+
+it('ACCEDE: it expects to receive a status 400', function(done){
+    let obj={username:"Ciccio", password:"12345"};
+    chai.request(server)
+        .post('/observer/accede')
+        .send(obj)
+        .end(function(err, res){
+            res.should.have.status(404);
+            done();
+        });
+});
