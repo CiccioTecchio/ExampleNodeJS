@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "nyc mocha --timeout 10000 --exit && ./node_modules/.bin/eslint --fix app.js routes/** test/**.js model/**.js signleton/**.js",
+    "test": "nyc mocha --timeout 30000 --exit && ./node_modules/.bin/eslint --fix app.js routes/** test/**.js model/**.js signleton/**.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
