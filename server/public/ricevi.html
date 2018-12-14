@@ -1,0 +1,23 @@
+<html>
+    <head><title>Receive</title></head>
+    <body>
+        Riceve il messaggio inviato da <a href="server/public/invia.html">invia.html</a>
+        <br><span>Messaggio: </span><p></p>
+    </body>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+<script>
+    setInterval(function(){
+        $.ajax({
+            url: 'observer/response',
+            type: 'GET',
+            success: function(done){
+             $("p").html(done.msg);
+            }
+        });
+    }, 30000);
+</script>
+</html>

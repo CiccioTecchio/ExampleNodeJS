@@ -71,3 +71,4 @@ server/.idea/Server.iml
 server/.nyc_output
 server/coverage
 ExampleNodeJS.code-workspace
+server/upload/

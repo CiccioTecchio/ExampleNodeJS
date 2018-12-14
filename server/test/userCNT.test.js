@@ -18,7 +18,7 @@ let regexp = {
 };
 
 describe('Signin', function(){
-    it('/POST: it should add a user if  exist', function(done){
+    it('/POST: it should add a user if does not exist', function(done){
         let random = "Test"+randomstring.generate(4);
         let user ={username:random, password:"1234"};
         chai.request(server)

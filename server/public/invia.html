@@ -1,0 +1,22 @@
+<html>
+    <head><title>Send</title></head>
+    <body>
+        Invia un messaggio a <a href="server/public/ricevi.html">ricevi.html</a><br>
+        <input type="text">
+        <button >Send</button>
+    </body>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+<script>
+    $("button").click(function() {
+        $.ajax({
+            url: 'observer/listen',
+            type: 'POST',
+            data: {msg: $("input").val()},
+        });
+    });
+</script>
+</html>

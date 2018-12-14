@@ -5,14 +5,15 @@ let router = require('express').Router();
 router.post('/upload', function(req, res){
     let file = req.files.filename;
     let filename = file.name;
+    console.log(req);
     file.mv('./upload/'+filename, function(err){
-        if(err) res.status(500).end("500: Internal server error");
+        if(err) {
+            res.status(500).end("500: Internal server error");}
         else {//inserisci nel db
+            
             fileStorage.create({name: filename})
-                .then(doc => res.send({message:"a "+doc}).status(200).end())
-                .catch(err => res.send({message:"b "+err}).status(403).end());
-            //.then(doc =>res.send({message: ""}).status(200).end();
-            //.catch(err => res.send({message:""+err}).statusCode(403));
+                .then(doc => res.send({message:"a "+doc}).status(200).end());
+            //.catch(err => res.send({message:"b "+err}).status(403).end());
         }
     });
     /*Soluzione con le promise

@@ -6,6 +6,7 @@ let upload = require('express-fileupload');
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/usersCNT');
 let fileStorageRouter = require('./routes/fileStorageCNT');
+let observerRouter = require('../server/routes/observer');
 
 let app = express();
 
@@ -21,6 +22,7 @@ app.use(upload());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/file', fileStorageRouter);
+app.use('/observer', observerRouter);
 
 let server = app.listen(3000, "127.0.0.1", function () {
     let address = server.address().address;
